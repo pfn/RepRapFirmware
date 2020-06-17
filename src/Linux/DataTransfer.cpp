@@ -311,6 +311,8 @@ void DataTransfer::ReadHeightMap() noexcept
 		}
 	}
 
+	map.ExtrapolateMissing();
+
 	// Activate it
 	reprap.GetGCodes().ActivateHeightmap(true);
 
